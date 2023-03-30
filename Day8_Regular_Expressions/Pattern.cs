@@ -36,6 +36,18 @@ namespace Day8_Regular_Expressions
             }
         }
 
+        public static void Question3(string inputString)
+        {
+            Regex regex = new Regex(@"<[^>]+>");
+
+            MatchCollection matches = regex.Matches(inputString);
+
+            foreach (Match match in matches)
+            {
+                Console.WriteLine(match.Value);
+            }
+        }
+
     }
 
 }

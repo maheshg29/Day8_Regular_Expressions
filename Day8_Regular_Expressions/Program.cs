@@ -12,7 +12,8 @@ namespace Day8_Regular_Expressions
         {
             Console.WriteLine("Welcome To Day 8 Practice Problem for Regular Expressions");
             Console.WriteLine("Select one Option for \n 1. Write a C# program that matches a string that has an ‘a’ followed by two to three 'b'\n" +
-                " 2. Write a C# program to find sequences of lowercase letters joined by an underscore");
+                " 2. Write a C# program to find sequences of lowercase letters joined by an underscore\n" +
+                " 3. Write a Regular expression to fetch all HTML tags from a given string.");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -23,6 +24,10 @@ namespace Day8_Regular_Expressions
                 case 2:
                     Pattern.Question2("Tree_plantation is very necessary because trees provide_oxygen to the environment and make the air_quality better");
                         break;
+
+                case 3:
+                    Pattern.Question3("<p>The <code>Regex</code> is a compiled representation of a regular expression.</p>");
+                    break;
 
                 default:
                     Console.WriteLine("Please Select Correct option");
