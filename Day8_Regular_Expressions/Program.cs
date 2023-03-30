@@ -14,7 +14,8 @@ namespace Day8_Regular_Expressions
             Console.WriteLine("Select one Option for \n 1. Write a C# program that matches a string that has an ‘a’ followed by two to three 'b'\n" +
                 " 2. Write a C# program to find sequences of lowercase letters joined by an underscore\n" +
                 " 3. Write a Regular expression to fetch all HTML tags from a given string.\n" +
-                " 4. Count the number of occurrences of the pattern in a given string.");
+                " 4. Count the number of occurrences of the pattern in a given string.\n" +
+                " 5. Use Regular expression to find valid file names with an image file type extension.");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -32,6 +33,10 @@ namespace Day8_Regular_Expressions
 
                 case 4:
                     Pattern.Question4("foxes are omnivorous mammals belonging to several genera of the family Canidae fox ");
+                    break;
+
+                case 5:
+                    Pattern.Question5("img.jpeg img1.gif img2.png img3.jpg img4.mp3 img5.mp4");
                     break;
 
                 default:

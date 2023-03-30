@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -53,8 +54,24 @@ namespace Day8_Regular_Expressions
             Regex regex = new Regex(@"fox(es)?");
 
             MatchCollection matches = regex.Matches(inputString);
-            Console.WriteLine("The Count of given Pattern in given String "+matches.Count);
+            Console.WriteLine("The Count of given Pattern in given String "+matches.Count);  
+        }
+        public static string imageRegex = "^[a-zA-Z0-9]+\\.(jpg|jpeg|png|gif)$";
+        public static void Question5(string inputString)
+        {
+            string[] words=inputString.Split(' ');
             
+            foreach (string word in words)
+            {
+                if (Regex.IsMatch(word,imageRegex))
+                {
+                    Console.WriteLine("{0} is a valid image file name ",word);
+                }
+                else
+                {
+                    Console.WriteLine("{0} is a Invalid image file name ",word);
+                }              
+            }  
         }
     }
 
